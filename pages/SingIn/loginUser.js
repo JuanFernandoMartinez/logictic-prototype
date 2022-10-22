@@ -18,7 +18,7 @@ export default function loginUser(){
                 </div>
                 <br/>
                 <div>
-                   <Button variant="contained">Let's Go</Button>
+                   <Button variant="contained">Lets Go</Button>
                 </div>
             </form>
         </div>
