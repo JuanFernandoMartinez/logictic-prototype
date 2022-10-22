@@ -1,3 +1,3 @@
 export default function handler(req,res){
-    res.send("funciona!");
+    res.send("funciona! modificado");
 }
