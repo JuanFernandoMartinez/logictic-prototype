@@ -1,7 +1,7 @@
 {
   "name": "logictic-prototype",
   "engines": {
-    "node": ">=14" 
+    "node": ">=16" 
   },
   "version": "0.1.0",
   "private": true,
