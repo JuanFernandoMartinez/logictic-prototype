@@ -1,6 +1,13 @@
 
-import query from "../../repository/consult";
+import db from "../../../repository/database";
 export default async function handler(req,res){
-    let response = await query("Select * from pedidos where  status = $2",["no entregado"]);
+    
+   const {body,method} = req;
+    
+   if (method === "POST"){
+    db.connect();
+    let response = await db.query("Select id,description,precio from pedido where status = $1 and user_id = $2",['no entregado',body.cedula]);
+    db.end();
     res.send(response.rows);
+   }
 }
