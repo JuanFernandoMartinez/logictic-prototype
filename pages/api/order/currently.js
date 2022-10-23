@@ -10,7 +10,7 @@ export default async function handler(req,res){
     
     let resto = []
     response.rows.map(e =>{
-      resto.push(e.id +" "+ e.description+ " "+e.precio)
+      resto.push(e.id +" , "+ e.description+ " , "+e.precio)
     })
     res.send(resto);
    }
