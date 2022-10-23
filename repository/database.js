@@ -10,6 +10,7 @@ if (!db){
         }
       });
 }
+db.connect();
 
 
 export default db;

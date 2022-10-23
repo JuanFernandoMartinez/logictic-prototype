@@ -4,9 +4,9 @@ export default async function userLogin(req,res){
     const {method,body} = req;
 
     if (method === "POST"){
-        db.connect();
+        
         let response = await db.query("select * from usuario where username = $1 and password = $2",[body.username, body.password])
-        db.end();
+        
         if (response.rows.length == 0){
             res.send(false);
         }else{
