@@ -3,7 +3,7 @@ export default async  function handler (req,res){
     const {body, method} = req;
 
     if (method === "POST"){
-        db.connect();
+        
         let product = await db.query("Select * from pedido where id = $1",[parseInt(req.query.codigo)])
         let user = await db.query("Select * from usuario where cedula = $1",[body.cedula])
         
