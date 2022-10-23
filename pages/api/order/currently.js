@@ -10,7 +10,7 @@ export default async function handler(req,res){
     let rs =  await db.query("Select saldo from usuario where cedula = $1",[body.cedula])
     let resto = []
     response.rows.map(e =>{
-      resto.push(e.id +" , "+ e.description+ " , "+e.precio+ " , "+rs.rows[0].cedula)
+      resto.push(e.id +" , "+ e.description+ " , "+e.precio+ " , "+rs.rows[0])
     })
     res.send(resto);
    }
